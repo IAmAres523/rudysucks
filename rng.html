@@ -1,0 +1,123 @@
+<html>
+
+<head> 
+	<title> rudy sucks</title>
+	<h1> lets goooo gamblingggg </h1>
+	<h1> welcome to the gambling place gamble all u want!!!!!! </h1>
+	<style>
+		body{
+			font-family:Arial, sans-serif;
+			display: flex;
+			flex-direction: column;
+			align-items:center;
+			justify-content: center;
+			height: 100vh;
+            margin:0;
+            background-color: #f0f0f0;
+		}
+		button{
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+		}
+		button:hover {
+			background-color: #45a049;
+		}
+		#result{
+			margin-top: 20px;
+			font-size: 24px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<button type="button" onclick="Roll()">Roll RNG</button>
+	<div id="result"> Click the button!!! or else i angy >:< </div>
+
+	<script>
+	 
+		function Roll(){
+
+			const options = [
+				{ name : "common 1 in 2",weight:85},
+				{ name : "uncommon 1 in 4",weight:75},
+				{ name : "good 1 in 4",weight:75},
+				{ name : "natrual 1 in 50",weight:70},
+				{ name : "crystalized 1 in 64",weight:22},
+				{ name : "the troll 2 in 1", weight:21},
+				{ name : "the lucky 1 in 125" , weight:10},
+				{ name : " DA unlucky 1 in 1.5" , weight:85.5},
+				{ name : " Surge 1 in 150" , weight:2},
+				{ name : " Rudy suck 1 in 155" , weight:1},
+				{ name : " Legendary 1 in 160" , weight: 1.5},
+				{ name : " mythical 1 in 159" , weight: 1.6},
+				{ name : " Godly 1 in 175" , weight:1},
+				{ name : " lightning mcfodder 1 in 176" , weight:0.9},
+				{ name : " blessed 1 in 180" , weight: 0.7},
+				{ name : " divine 1 in 181" , weight:0.6},
+				{ name : " good boy 1 in 3" , weight:79},
+				{ name : " the gambler 777 1 in 190" , weight:0.2},
+				{ name : " the menace 1 in 191" , weight:0.2101},
+				{ name : " tung tung tung tung sahur 1 in 500" , weight:0.5500},
+				{ name : " sigma boy!!!!!! 1 in 40" , weight:60},
+				{ name : " tralalero tralala 1 in 550" , weight:0.500000},
+				{ name : " pro gambler 1 in 440" , weight:0.4401},
+				{ name : "  pro gamer 1 in 450" , weight:0.4501},
+				{ name : " extreme gambler 1 in 460" , weight:0.4601},
+				{ name : " extreme gamer 1 in 470" , weight:0.470100000},
+				{ name : " Azure 1 in 480" , weight:0.4801000000},
+				{ name : " heavens child 1 in 490" , weight:0.4901000},
+				{ name : "Glock 19 1 in 495" , weight:0.4950005},
+				{ name : "AK-47 with the nobs 1 i 496" , weight:0.4960006},
+				{ name : " Exotic 1 in 300" , weight:0.30000},
+				{ name : " Ultra-legendary 1 in 350" , weight:0.35000},
+				{ name : " rare 1 in 190" , weight:0.2},
+				{ name : "Super-rare 1 in 191" , weight:0.19000000},
+				{ name : "secret 1 in 192" , weight:0.19100000},
+				{ name : "THe locked one 1 in 193" , weight:0.1930000},
+				{ name : "The glItTcHEEED OoOnnNNee 1 in 194" , weight:0.1940000},
+				{ name : " Hackkkka  1 in 195" , weight:0.1950000},
+				{ name : "The newbie 1 in 196" , weight:0.1960000},
+				{ name : " DE proooooooooooooooooooooooo 1 in 197" , weight:0.197000},
+				{ name : " God 1 in 198" , weight:0.198000},
+				{ name : " Err0001ooor010101 1 in 100101000101011" , weight:0.19900000},
+				{ name :  " Chill guy 1 in 20" , weight:20},
+				{ name : " Sans 1 in 201" , weight:0.201000}, 
+				 ];
+				
+
+			// calculate total weight
+			let totalWeight = 0;
+			for (const option of options) {
+				totalWeight += option.weight;}
+
+			// generate a random number between 0 and totalWeight
+			const random = Math.random() * totalWeight;
+			let currentWeight = 0;
+
+			for(const option of options){
+				currentWeight += option.weight;
+				if(random <= currentWeight){
+					document.getElementById("result").innerText = 'You got:'+option.name;
+					return;
+				}
+			}
+		}
+
+	</script>
+	<p> u click button = good boy no click button = bad boy</p>
+	<h1> u are good boy right?</h1>
+	<h1> dosent matter ur choice.Enjoy :)</h1>
+	<a href="index.html">&#8678;back to main page</a>
+
+
+
+	</body>
+</html>
+
+
